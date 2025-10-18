@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOMO COIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>       
+    <style>
+       /* Menggunakan CSS kustom untuk memastikan ikon melayang tetap di tempatnya */
+        .whatsapp-float {
+            /* Position fixed memastikan ikon tetap terlihat saat di-scroll */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Pastikan ikon berada di atas semua elemen lain */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: pulse 2s infinite; /* Animasi berkedip lembut */
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
         a {
     text-decoration: none; /* Menghilangkan garis bawah */
     color: blue;         /* Opsional: Tautan default-nya berwarna biru */
@@ -833,7 +851,19 @@
         }
     </style>
 </head>  
-<body>   
+<body> 
+    
+    <a 
+        href="https://wa.me/6285714406957." 
+        target="_blank" 
+        class="whatsapp-float flex items-center justify-center 
+               w-16 h-16 rounded-full bg-[#25d366] text-white shadow-xl"
+        aria-label="Hubungi kami via WhatsApp">
+        
+        <!-- Ikon WhatsApp dari Font Awesome -->
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    
     <!-- Header -->
     <header>
         <nav>
