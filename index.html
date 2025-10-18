@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOMO COIN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .social-icons {
+            position: fixed; /* INI ADALAH KUNCI UTAMANYA: Membuat posisi tetap */
+            bottom: 20px;    /* Jarak dari bawah (DIUBAH) */
+            right: 20px;     /* Jarak dari kanan (DIUBAH) */
+            z-index: 1000;   /* Memastikan icon selalu di atas konten lain */
+            
+            display: flex;
+            flex-direction: column; /* Menyusun icon secara vertikal */
+            gap: 15px; /* Jarak antar icon */
+        }
+
+        /* Gaya untuk setiap link icon */
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;       /* Lebar container icon */
+            height: 50px;      /* Tinggi container icon */
+            background-color: #555; /* Warna background default */
+            border-radius: 50%; /* Membuat bentuk lingkaran */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efek bayangan */
+            transition: transform 0.2s ease-in-out; /* Animasi halus saat hover */
+        }
+
+        /* Efek saat cursor di atas icon */
+        .social-icons a:hover {
+            transform: scale(1.1); /* Icon sedikit membesar */
+        }
+
+        /* Warna khusus untuk setiap icon */
+        .social-icons a.telegram { background-color: #0088cc; }
+        .social-icons a.x-com { background-color: #000000; }
+        .social-icons a.pump-fun { background-color: #1a1a1a; } /* Warna gelap untuk kontras */
+
+        /* Gaya untuk SVG di dalamnya */
+        .social-icons svg {
+            width: 28px;  /* Lebar icon */
+            height: 28px; /* Tinggi icon */
+            fill: #ffffff; /* Warna icon (putih) */
+        }
+
+        /* Gaya untuk gambar Pump.fun di dalamnya */
+        .social-icons a.pump-fun img {
+            width: 75%;   /* Lebar gambar sedikit lebih kecil dari container */
+            height: 75%;  /* Tinggi gambar sedikit lebih kecil dari container */
+            object-fit: contain; /* Memastikan gambar tidak terpotong */
+            border-radius: 50%; /* Membuat gambar juga berbentuk lingkaran */
+        }
+    </style>
     
     <style>
         a {
@@ -832,7 +882,29 @@
             }
         }
     </style>
-</head>  
+</head>
+
+    <!-- ==================================== -->
+    <div class="social-icons">
+        <a href="https://t.me/m0m0_squad" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-5.85c.73-.27 1.37.17 1.13.94l-2.72 12.72c-.24.89-.93 1.11-1.5.69l-4.08-3.01-1.96 1.9c-.23.22-.42.41-.83.41z"></path>
+            </svg>
+        </a>
+
+        <a href="https://x.com/#" target="_blank" rel="noopener noreferrer" aria-label="X.com" class="x-com">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+        </a>
+
+        <a href="https://pump.fun/coin/#" target="_blank" rel="noopener noreferrer" aria-label="Pump.fun" class="pump-fun">
+            <!-- Menggunakan gambar dari URL yang diberikan -->
+            <img src="https://assets.coingecko.com/coins/images/67164/standard/pump.jpg?1751949376" alt="Pump.fun Logo">
+        </a>
+    </div>
+    <!-- ==================================== -->
+    
 <body> 
     <!-- Header -->
     <header>
