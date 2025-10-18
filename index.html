@@ -21,6 +21,21 @@
         .telegram-float:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            
+        }
+        .x-float {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .x-float:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         a {
@@ -855,9 +870,17 @@
         href="https://t.me/m0m0__squad" 
         target="_blank" 
         class="telegram-float flex items-center justify-center 
-               w-13 h-13 rounded-full bg-[#0088CC] text-white shadow-xl"
+               w-14 h-13 rounded-full bg-[#0088CC] text-white shadow-xl"
         aria-label="">
         <i class="fab fa-telegram text-3xl"></i>
+    </a>
+    <a 
+        href="" 
+        target="_blank" 
+        class="x-float flex items-center justify-center 
+               w-14 h-13 rounded-full bg-[#FFFFFF] text-white shadow-xl"
+        aria-label="">
+        <i class="fab fa-x text-3xl"></i>
     </a>
     
     <!-- Header -->
@@ -1056,12 +1079,6 @@
             <div class="footer-column">
                 <h3>MOMO COIN</h3>
                 <p>An innovative meme coin designed to create a better future in a fun way.</p>
-                <div class="social-links" style="margin-top: 1rem;">
-                    <a href="#"><i class="fab fa-x"></i></a>
-                    <a href="https://t.me//m0m0_squad"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-pumpfun"></i></a>
-                    
-                </div>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
